@@ -25,6 +25,7 @@
 				$elem = plugin.element;
 				label = plugin.options.label;
 				state = plugin.options.isPressed ? 'pressed' : 'not pressed';
+				$('.'+label).attr("aria-pressed", state =='pressed')
 				
 				console.log(label + ' button is ' + state);
 			}
@@ -33,12 +34,12 @@
 	</head>
 	<body>
 		<main>
-			<a href="index.html">&larr; Index</a>
+			<a href="index.html" area-label="index" tabindex="1">&larr; Index</a>
 			<h1>Toggle Button</h1>
 			<div class="buttongroup">
-				<div class="toggle italic">I</div>
-				<div class="toggle bold">B</div>
-				<div class="toggle underline">U</div>
+				<div role="button" class="toggle italic" area-label="italic" tabindex="1">I</div>
+				<div role="button" class="toggle bold" area-label="bold" tabindex="2">B</div>
+				<div role="button" class="toggle underline" area-label="undeline" tabindex="3">U</div>
 			</div>
 		</main>
 	</body>
