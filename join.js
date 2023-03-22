@@ -49,7 +49,9 @@ var showBlock = function(className){
 
 window.onload = function () {
     if($s("country").value == ''){ 
+
             $s("country").value = "usa";
+            document.getElementById("alertContainer").innerHTML ='Nazione Mancante inserita USA'
     }
     setCountry(); 
     joinForm = new JoinForm();
