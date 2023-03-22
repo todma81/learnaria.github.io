@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="" style="z-index: auto; position: static; top: auto;" id="lrg_topnav">
-		<div style="width: 100%;" id="topnavlistcontainer" aria-label="main navigation tabs">
+		<div role="navigation" style="width: 100%;" id="topnavlistcontainer" aria-label="main navigation tabs">
 			<a id="main-nav"></a>
 			<ul style="" id="topnavlist">
 			<li><a href="index.html" accesskey="1" title="Back to Index Alt+1">Back to Index</a></li>
@@ -33,7 +33,7 @@
 	</div>
 
 	<div class="logoutbar">&nbsp; <input type="text" class="input"><input type="submit" value="search"></div>
-	<div class="crumbcontainer">
+	<div class="crumbcontainer" role="search">
 			<div id="breadcrumbs" tabindex="0" aria-label="breadcrumb links">&nbsp;</div>
 	</div>
 	<div id="contentwrapper">
@@ -44,7 +44,7 @@
 					<br/>
 					<h2 class="box"><span>Networking</span></h2>
 					<div class="box" id="menu_Networking">
-						<ul class="social_side_menu">
+						<ul class="social_side_menu" role="banner">
 							<li><a href="" class="fake">My Network</a></li>
 							<li><a href="" class="fake">My Contacts</a></li>
 							<li><a href="" class="fake">Network Profile</a></li>
@@ -56,7 +56,7 @@
 					</div>
 				<br/>
 					<h2 class="box"><span>People Online</span></h2>
-					<div class="box" id="menu_UsersOnline">
+					<div role="complementary" id="menu_UsersOnline">
 						<ul style="padding: 0px; list-style: none;">
 							<li style="padding: 3px 0px;" id="mylogin">No one logged in</li>
 						</ul>
@@ -71,7 +71,7 @@
 		<br style="clear:both;">
 		<a id="top"></a>
 
-	<div class="profile">
+	<div class="profile" role="main">
 		<h2>Join our community</h2>
 		<div id="feedback">&nbsp;</div>
 		<form id="join_form">
@@ -224,7 +224,7 @@
 <p><br><br>&nbsp;</p>
 </div>
 
-<div id="footer"> Copyright &copy; <a href="" class="fake">Chang School.</a>
+<div id="footer" role="contentInfo"> Copyright &copy; <a href="" class="fake">Chang School.</a>
 </div>
 
 </body>
