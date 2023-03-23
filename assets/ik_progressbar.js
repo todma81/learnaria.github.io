@@ -40,6 +40,7 @@
 			
 		this.notification = $('<div/>') // add div element to be used to notify about the status of download
 			.addClass('ik_readersonly')
+			.attr({'aria-live':'assertive','aria-atomic':'addition', 'aria-hidden':'true'})
 			.appendTo(this.element);
 
 		$('<div/>')
@@ -98,7 +99,7 @@
 		this.element
 			.data({ // inaccessible
 				'value': parseInt(val) 
-			}) 
+			}).attr({'aria-valuenow':  this.getPercent()}) 
       ;
 		
 		this.updateDisplay();

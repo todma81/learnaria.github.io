@@ -61,9 +61,11 @@
 				<div id="pb_lbl">Click on <strong>Run Demo</strong> to simulate download.</div>
 			</p>
 			<p>
-				<div id="pb"></div>
+				<div id="pb" tabindex="-1" role="region" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0">
+					
+				</div>
 			</p>
-			<button id="btnTest" onclick="runTest(event);">Run Demo</button>
+			<button id="btnTest" onclick="runTest(event);"  aria-describedby="btnTest">Run Demo</button>
 		</main>
 	</body>
 </html>
