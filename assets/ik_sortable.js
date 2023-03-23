@@ -30,6 +30,8 @@ var pluginName = "ik_sortable",
 			
 			$(el).attr({
 				'draggable': true,
+				'tabindex':0,
+				'aria-label':el.textContent,
 				'id': id + '_' + i
 			});
 		})
@@ -38,7 +40,30 @@ var pluginName = "ik_sortable",
 		.on('dragend', {'plugin': plugin}, plugin.onDragEnd)
 		.on('dragenter', {'plugin': plugin}, plugin.onDragEnter)
 		.on('dragover', {'plugin': plugin}, plugin.onDragOver)
-		.on('dragleave', {'plugin': plugin}, plugin.onDragLeave);
+		.on('dragleave', {'plugin': plugin}, plugin.onDragLeave)
+		.on('keydown', {'plugin': plugin}, plugin.onKeyDown);
+		
+	};
+
+	Plugin.prototype.onKeyDown = function (event) {
+		
+		var plugin, $me;
+				
+		plugin = event.data.plugin;
+		event = event.originalEvent || event;
+		$me = $(event.currentTarget);
+		console.log($me);
+		
+		if(event.key == "ArrowUp") {
+            $me.insertBefore($me.next());
+            $me.focus();
+            plugin.resetNumbering(plugin);
+        }
+        if(event.key == "ArrowDown") {
+            $me.insertAfter($me.next());
+            $me.focus();
+            plugin.resetNumbering(plugin);
+        }
 		
 		
 	};
